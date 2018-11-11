@@ -1,0 +1,54 @@
+<header class="header">
+  <div class="header__left">
+    <img class="gamburger" src="/assets/img/ic_menu_white_24dp_1x.png" alt="menu">
+    <img class="logo" src="/assets/img/logo.png" alt="logo">
+    <ul class="menu">
+      <li class="menu_li">Ссылки</li>
+      <li>Контакты</li>
+      <li class="menu_li">Теги</li>
+      <li class="menu_li">Просьбы</li>
+      <li class="menu_li">Избранное</li>
+      <li class="menu_li">Посещения</li>
+    </ul>
+    <div class="form">
+      <form class="form_input" @inputTrigger *ngIf="toggle">
+        <i class="fa" aria-hidden="true"></i>
+        <input type="text" class="input_search" (focus)="onFocus()">
+        <button class="pluss"></button>
+        <button class="form_input_search">НАЙТИ</button>
+      </form>
+      <form class="form_filter" @focusTrigger *ngIf="focus">
+        <div>
+          <div><label class="container"><input class="form_filter_checkbox" type="checkbox" name="chbox">
+              <span class="checkmark"></span></label><span class="text"> мои</span></div>
+          <input class="form_filter_input" type="text" placeholder=" Автор ">
+        </div>
+        <div class="flex_1 container_center">
+          <span class="text">Сортировать по: </span> <select class="select" name="data">
+            <option value="" disabled selected> Дате </option>
+            <option value=""> 555555 </option>
+            <option value=""> 555 </option>
+          </select>
+        </div>
+        <div class="column">
+          <div><label class="container"><input class="form_filter_checkbox" type="checkbox" name="chbox">
+              <span class="checkmark"></span></label><span class="text">я участник</span></div>
+          <div><label class="container"><input class="form_filter_checkbox" type="checkbox" name="chbox" checked>
+              <span class="checkmark"></span></label> <span class="text">в заголовке</span></div>
+          <div><label class="container"><input class="form_filter_checkbox" type="checkbox" name="chbox">
+              <span class="checkmark"></span></label> <span class="text">строгий поиск</span></div>
+        </div>
+      </form>
+    </div>
+    <div class="button">
+      <div title="Поиск" class=" button_search" (mouseover)="onSearch()"></div>
+      <div class=" button_add"></div>
+    </div>
+  </div>
+  <div class="header__right">
+    <img src="/assets/img/ic_mail_outline_white_24dp_1x.png" alt="mail">
+    <img src="/assets/img/ic_notifications_none_white_24dp_1x.png" alt="bell">
+    <img src="/assets/img/Layer 181 copy.png" alt="layer">
+
+  </div>
+</header>
