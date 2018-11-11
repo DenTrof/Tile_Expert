@@ -23,7 +23,7 @@ input {
 }
 
 .header__left .gamburger {
-    display: none;
+    display: none; 
 }
 
 .header__left .logo {
@@ -36,7 +36,6 @@ input {
     width: 100%;
     max-width: 800px;
     margin-left: 95px;
- 
 }
 
 .header__left li {
@@ -53,6 +52,13 @@ input {
     position: absolute;
     padding-top: 3px;
     margin-left: 280px;
+}
+.header__left {
+    max-width: 1550px;
+}
+
+.header__left .form {
+    width: 49%;
 }
 
 .none {
@@ -264,14 +270,14 @@ i.fa+input {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-.header__left {
-    max-width: 1550px;
+
+.form_none {
+    display: none;
 }
-  .header__left .form {
-        width: 49%;
-    }
 
-
+.form_block {
+    display: block;
+}
 
 @media only screen and (max-width: 1366px) {
     .header__left {
@@ -289,12 +295,11 @@ i.fa+input {
     }
 }
 
-
 @media only screen and (max-width: 1200px) {
     .header__left {
         padding-left: 18px;
     }
-    .header__left li{
+    .header__left li {
         padding-right: 17px;
     }
     .header__right {
@@ -317,7 +322,7 @@ i.fa+input {
     .button_search {
         margin-left: -15px;
     }
-    .header__right img{
+    .header__right img {
         padding-right: 18px;
     }
 }

@@ -1,4 +1,4 @@
-import { Component, AfterViewChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   trigger,
   style,
@@ -26,23 +26,23 @@ import {
     ]),
   ]
 })
-export class HeaderComponent implements AfterViewChecked {
+export class HeaderComponent implements OnInit {
 
   constructor() {
   }
 
   public toggle = false;
   public focus = false;
+  public form1 
 
-  ngAfterViewChecked() {
-    const form1 = document.querySelector('.form_input');
-    const form2 = document.querySelector('.form_filter');
+  ngOnInit() {
+    const form1 = document.querySelector('.form_input_remove');
+    const form2 = document.querySelector('.form_filter_remove');
 
     function removeFilter(e) {
       if (form1 && form2 && !e.target.closest('.form_input, .form_filter')) {
-        form1.remove();
-        form2.remove();
-        this.removeEventListener('click', removeFilter);
+        form1.classList.add('form_none');
+        form2.classList.add('form_none');
         ofClick();
       }
     };
@@ -56,6 +56,10 @@ export class HeaderComponent implements AfterViewChecked {
   }
 
   onSearch(): void {
+    const form1 = document.querySelector('.form_input_remove');
+    const form2 = document.querySelector('.form_filter_remove');
+    form1.classList.add('form_block');
+    form2.classList.add('form_block');
     this.toggle = !this.toggle;
   }
 

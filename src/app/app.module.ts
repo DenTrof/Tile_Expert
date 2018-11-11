@@ -22,4 +22,6 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     HeaderComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
