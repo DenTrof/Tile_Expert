@@ -1,0 +1,6 @@
+diff a/src/app/header/header.component.css b/src/app/header/header.component.css	(rejected hunks)
+@@ -25,3 +25,3 @@
+ .header__left .gamburger {
+-    display: none;
++    display: none; 
+ }
